@@ -1,0 +1,290 @@
+.profile-setup-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  font-family: 'Archivo', sans-serif;
+}
+
+.profile-setup-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Left side image - maintains 50% width from login page */
+.setup-image {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.setup-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right side form container */
+.setup-form-container {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  background-color: white;
+}
+
+.setup-form-wrapper {
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Header styling */
+.setup-form-wrapper h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.setup-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+/* Photo upload area */
+.photo-upload-area {
+  background-color: #f9fafb;
+  border-radius: 12px;
+  padding: 80px 20px 40px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.profile-photo-container {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 20px;
+  bottom: -50px;
+  border-radius: 50%;
+  background-color: #fbb363;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.add-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background-color: #FFB800;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.upload-cover-btn {
+  background: #FFF1DB;
+  border: none;
+  color: #FFB800;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+
+/* Form styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Ensure form text is left-aligned */
+.form-group label,
+.form-input,
+textarea {
+  text-align: left;
+  color: #666;
+}
+
+/* Make text inputs match screenshot */
+.form-input, 
+textarea,
+.form-group input,
+.form-group textarea {
+  color: #171717; /* Text color */
+  background: #f5f5f5;
+  border: none;
+  font-family: 'Archivo', sans-serif;
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Ensure placeholder text matches screenshot */
+.form-input::placeholder,
+textarea::placeholder,
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #666;
+}
+
+.info-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  color: #666;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  margin-left: 4px;
+}
+
+.form-input {
+  width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+}
+
+.form-input::placeholder {
+  color: #666;
+}
+
+/* Two column layout */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+/* Bio editor */
+.bio-editor {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.editor-toolbar {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.toolbar-btn {
+  background: none;
+  border: none;
+  margin-right: 10px;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.toolbar-btn.bold {
+  font-weight: bold;
+}
+
+.toolbar-btn.italic {
+  font-style: italic;
+}
+
+.toolbar-btn.underline {
+  text-decoration: underline;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.bio-editor textarea {
+  width: 100%;
+  min-height: 120px;
+  border: none;
+  padding: 15px;
+  background-color: #f5f5f5;
+  resize: none;
+  font-family: 'Archivo', sans-serif;
+  font-size: 16px;
+  color: #171717;
+}
+
+.bio-editor textarea:focus {
+  outline: none;
+}
+
+.bio-editor textarea::placeholder {
+  color: #999;
+}
+
+/* Continue button */
+.continue-button {
+  width: 100%;
+  height: 48px;
+  background: #FFB800;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profile-setup-container {
+    flex-direction: column;
+  }
+  
+  .setup-image {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .setup-form-container {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
